@@ -14,7 +14,7 @@ echo Done clean up.
 
 :: 2. START PAYMENT GATEWAY (ASP.NET)
 echo [2/4] Launching Payment Gateway (Port 5000)...
-start "Payment Gateway" cmd /c "cd /d "%~dp0PaymentGetway" && dotnet run --urls http://localhost:5000"
+start "Payment Gateway" cmd /c "cd /d "%~dp0PaymentGetway" && dotnet run --urls http://127.0.0.1:5000"
 
 :: 3. START BOOKING BACKEND (JAVA)
 echo [3/4] Launching Java Backend (Port 8980)...
@@ -32,8 +32,8 @@ echo Services are being launched in separate windows.
 echo.
 echo Check the new windows for errors.
 echo.
-echo Frontend: http://localhost:3000
-echo Backend:  http://localhost:8980
-echo Gateway:  http://localhost:5000
+echo Frontend: http://127.0.0.1:3000
+echo Backend:  http://127.0.0.1:8980
+echo Gateway:  http://127.0.0.1:5000
 echo ===================================================
 pause

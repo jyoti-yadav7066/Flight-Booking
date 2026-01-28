@@ -16,7 +16,7 @@ namespace PaymentGetway.Controllers
     {
         private const string KEY = "rzp_test_S8p5Gc7pIh86oW";
         private const string SECRET = "SaglgWuJ6L1V1fu51BpZq5m2";
-        private const string BACKEND_URL = "http://localhost:8980/book/confirmPayment"; 
+        private const string BACKEND_URL = "http://127.0.0.1:8980/book/confirmPayment"; 
 
         [HttpPost("createorder")]
         public IActionResult CreateOrder([FromBody] EntityOrder orderDetails)

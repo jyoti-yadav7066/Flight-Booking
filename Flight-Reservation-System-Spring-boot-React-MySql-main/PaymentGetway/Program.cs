@@ -14,7 +14,7 @@
             {
                 options.AddPolicy("AllowReactApp",
                     builder => builder
-                        .WithOrigins("http://localhost:3000") // Adjust port if React runs elsewhere
+                        .WithOrigins("http://127.0.0.1:3000") // Adjust port if React runs elsewhere
                         .AllowAnyMethod()
                         .AllowAnyHeader());
             });

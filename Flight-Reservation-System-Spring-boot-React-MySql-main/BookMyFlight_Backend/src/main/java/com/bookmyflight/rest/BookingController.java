@@ -130,7 +130,7 @@ public class BookingController {
 			request.setAmount(amount);
 
 			RestTemplate restTemplate = new RestTemplate();
-			String paymentGatewayUrl = "http://localhost:5000/api/payment/createorder";
+			String paymentGatewayUrl = "http://127.0.0.1:5000/api/payment/createorder";
 
 			HttpHeaders headers = new HttpHeaders();
 			headers.setContentType(MediaType.APPLICATION_JSON);
