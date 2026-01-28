@@ -1,0 +1,51 @@
+﻿@model PaymentGetway.Models.EntityOrder
+
+<h3>Confirm Payment</h3>
+
+<p><b>Name:</b> @Model.Name</p>
+<p><b>Email:</b> @Model.Email</p>
+<p><b>Mobile:</b> @Model.Mobile</p>
+<p><b>Amount:</b> ₹@Model.Amount</p>
+
+<button id="rzp-button1" class="btn btn-primary">
+    Pay with Razorpay
+</button>
+
+<form id="payment-form" method="post" action="/MyOrder/Payment">
+    <input type="hidden" name="razorpay_payment_id" id="razorpay_payment_id" />
+    <input type="hidden" name="razorpay_order_id" id="razorpay_order_id" />
+    <input type="hidden" name="razorpay_signature" id="razorpay_signature" />
+</form>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+    var options = {
+        key: "@ViewBag.Key",
+        amount: parseInt("@ViewBag.Amount"),
+        currency: "INR",
+        name: "Flight Booking",
+        description: "Ticket Payment",
+        order_id: "@ViewBag.OrderId",
+
+        prefill: {
+            name: "@Model.Name",
+            email: "@Model.Email",
+            contact: "@Model.Mobile"
+        },
+
+        handler: function (response) {
+            document.getElementById("razorpay_payment_id").value = response.razorpay_payment_id;
+            document.getElementById("razorpay_order_id").value = response.razorpay_order_id;
+            document.getElementById("razorpay_signature").value = response.razorpay_signature;
+            document.getElementById("payment-form").submit();
+        }
+    };
+
+    var rzp1 = new Razorpay(options);
+
+    document.getElementById("rzp-button1").onclick = function (e) {
+        e.preventDefault();
+        rzp1.open();
+    };
+</script>

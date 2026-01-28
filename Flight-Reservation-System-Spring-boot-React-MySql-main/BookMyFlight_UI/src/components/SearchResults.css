@@ -1,0 +1,51 @@
+.results-container {
+  padding: 20px;
+}
+
+.flight-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.flight-left h4 {
+  margin: 0;
+}
+
+.flight-mid {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.duration {
+  text-align: center;
+}
+
+.duration hr {
+  width: 50px;
+  border: 1px solid #999;
+}
+
+.flight-right {
+  text-align: right;
+}
+
+.flight-right h3 {
+  color: #ff5a5f;
+  margin: 0;
+}
+
+.flight-right button {
+  background: #ff5a5f;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}

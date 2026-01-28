@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "PN1Cj/RMb5s=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\yasho\\Desktop\\1\\Flight-Reservation-System-Spring-boot-React-MySql-main (1)\\Flight-Reservation-System-Spring-boot-React-MySql-main\\PaymentGetway\\PaymentGetway.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yasho\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\yasho\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512",
+    "C:\\Users\\yasho\\.nuget\\packages\\razorpay\\3.3.2\\razorpay.3.3.2.nupkg.sha512"
+  ],
+  "logs": []
+}
