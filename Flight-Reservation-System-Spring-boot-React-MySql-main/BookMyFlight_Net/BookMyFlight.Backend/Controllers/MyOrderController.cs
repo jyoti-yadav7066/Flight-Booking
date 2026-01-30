@@ -12,6 +12,13 @@ namespace BookMyFlight.Backend.Controllers
 {
     public class MyOrderController : Controller
     {
+        private readonly IBookingService _bookService;
+
+        public MyOrderController(IBookingService bookService)
+        {
+            _bookService = bookService;
+        }
+
         [BindProperty]
         public EntityOrder _OrderDetails { get; set; }
 
@@ -104,21 +111,40 @@ namespace BookMyFlight.Backend.Controllers
                 order.TransactionId = razorpay_payment_id;
                 order.OrderId = razorpay_order_id;
 
-                // 🔥 NOTIFY MAIN BACKEND TO GENERATE TICKET (Self-referencing for now, can be internal call later)
-                using (var httpClient = new HttpClient())
+                // 🔥 GENERATE TICKET DIRECTLY (No HTTP call)
+                int bookingId = int.Parse(order.Id);
+                var booking = _bookService.GetBookingById(bookingId);
+                
+                if (booking != null)
                 {
-                    var ticketData = new { ticketNumber = 0, booking_date = (string)null, total_pay = 0 };
-                    var content = new StringContent(JsonSerializer.Serialize(ticketData), Encoding.UTF8, "application/json");
-                    
-                    // Dynamic URL based on environment port
-                    var port = Environment.GetEnvironmentVariable("PORT") ?? "8980";
-                    var selfUrl = $"http://localhost:{port}";
-                    var response = await httpClient.PostAsync($"{selfUrl}/book/ticket/{order.UserId}/{order.Id}/1", content);
-                    
-                    if (!response.IsSuccessStatusCode)
+                    booking.PayStatus = 1;
+                    _bookService.UpdateBooking(booking);
+
+                    // Ensure Flight is loaded for price calc
+                    // If flight is null, we might have issues, but assuming standard flow:
+                    double total_pay = 0;
+                    if (booking.Flight != null)
                     {
-                        Console.WriteLine("Failed to generate ticket in backend: " + await response.Content.ReadAsStringAsync());
+                        total_pay = booking.Flight.Price * booking.NumberOfSeatsToBook;
                     }
+                    else 
+                    {
+                         // Fallback or re-fetch flight if needed, but Repo likely includes it.
+                         // For now, trust the existing logic flow or default to 0/Client amount
+                         total_pay = (double)order.Amount;
+                    }
+
+                    var ticket = new Ticket 
+                    { 
+                        Booking_date = DateOnly.FromDateTime(DateTime.Now), 
+                        Total_pay = total_pay 
+                    };
+                    
+                    _bookService.GenerateTicket(ticket, order.UserId, bookingId);
+                }
+                else 
+                {
+                    Console.WriteLine("Booking not found for ID: " + bookingId);
                 }
 
                 return View("PaymentSuccess", order);
