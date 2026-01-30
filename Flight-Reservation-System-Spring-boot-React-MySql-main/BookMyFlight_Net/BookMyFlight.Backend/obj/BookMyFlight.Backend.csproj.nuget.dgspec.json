@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yasho\\Desktop\\Demoooooo\\Flight-Reservation-System-Spring-boot-React-MySql-main\\BookMyFlight_Net\\BookMyFlight.Backend\\BookMyFlight.Backend.csproj": {}
+    "C:\\Users\\Admin\\OneDrive\\Desktop\\Git_UpdatedProject\\Flight-Booking\\Flight-Reservation-System-Spring-boot-React-MySql-main\\BookMyFlight_Net\\BookMyFlight.Backend\\BookMyFlight.Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yasho\\Desktop\\Demoooooo\\Flight-Reservation-System-Spring-boot-React-MySql-main\\BookMyFlight_Net\\BookMyFlight.Backend\\BookMyFlight.Backend.csproj": {
+    "C:\\Users\\Admin\\OneDrive\\Desktop\\Git_UpdatedProject\\Flight-Booking\\Flight-Reservation-System-Spring-boot-React-MySql-main\\BookMyFlight_Net\\BookMyFlight.Backend\\BookMyFlight.Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yasho\\Desktop\\Demoooooo\\Flight-Reservation-System-Spring-boot-React-MySql-main\\BookMyFlight_Net\\BookMyFlight.Backend\\BookMyFlight.Backend.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\OneDrive\\Desktop\\Git_UpdatedProject\\Flight-Booking\\Flight-Reservation-System-Spring-boot-React-MySql-main\\BookMyFlight_Net\\BookMyFlight.Backend\\BookMyFlight.Backend.csproj",
         "projectName": "BookMyFlight.Backend",
-        "projectPath": "C:\\Users\\yasho\\Desktop\\Demoooooo\\Flight-Reservation-System-Spring-boot-React-MySql-main\\BookMyFlight_Net\\BookMyFlight.Backend\\BookMyFlight.Backend.csproj",
-        "packagesPath": "C:\\Users\\yasho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yasho\\Desktop\\Demoooooo\\Flight-Reservation-System-Spring-boot-React-MySql-main\\BookMyFlight_Net\\BookMyFlight.Backend\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Git_UpdatedProject\\Flight-Booking\\Flight-Reservation-System-Spring-boot-React-MySql-main\\BookMyFlight_Net\\BookMyFlight.Backend\\BookMyFlight.Backend.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\OneDrive\\Desktop\\Git_UpdatedProject\\Flight-Booking\\Flight-Reservation-System-Spring-boot-React-MySql-main\\BookMyFlight_Net\\BookMyFlight.Backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\yasho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

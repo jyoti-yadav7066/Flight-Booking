@@ -5,7 +5,7 @@
  */
 export default class FlightServiceRest {
     constructor() {
-        this.uri = "http://localhost:8980/flight";
+        this.uri = (process.env.REACT_APP_API_URL || "http://localhost:8980") + "/flight";
         this.flights = [];
     }
 

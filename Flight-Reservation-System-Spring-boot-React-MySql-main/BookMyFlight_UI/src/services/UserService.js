@@ -8,7 +8,7 @@ import axios from "axios";
 export default class UserService {
 
     constructor() {
-        this.uri = "http://localhost:8980";
+        this.uri = process.env.REACT_APP_API_URL || "http://localhost:8980";
 
     }
 

@@ -56,8 +56,9 @@ builder.Services.AddCors(options =>
         });
 });
 
-// Configure URL/Port
-builder.WebHost.UseUrls("http://*:8980");
+// Configure URL/Port - Use PORT env variable for Render, fallback to 8980 for local
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8980";
+builder.WebHost.UseUrls($"http://*:{port}");
 
 var app = builder.Build();
 

@@ -107,7 +107,8 @@ class Payment extends Component {
                                                                     const bid = localStorage.getItem('bid');
                                                                     const amount = localStorage.getItem('total_amount');
 
-                                                                    const paymentUrl = `http://localhost:8980/MyOrder/Index?` +
+                                                                    const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:8980";
+                                                                    const paymentUrl = `${apiUrl}/MyOrder/Index?` +
                                                                         `bookingId=${bid}&` +
                                                                         `userId=${user.userId}&` +
                                                                         `amount=${amount}&` +
