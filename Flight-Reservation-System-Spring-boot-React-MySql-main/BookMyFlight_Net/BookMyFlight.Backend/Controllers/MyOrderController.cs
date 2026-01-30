@@ -149,6 +149,10 @@ namespace BookMyFlight.Backend.Controllers
                     Console.WriteLine("Booking not found for ID: " + bookingId);
                 }
 
+                // Pass Frontend URL to View
+                var frontendUrl = Environment.GetEnvironmentVariable("FRONTEND_URL") ?? "http://localhost:3000";
+                ViewBag.FrontendUrl = frontendUrl;
+
                 return View("PaymentSuccess", order);
             }
             catch (Exception ex)
