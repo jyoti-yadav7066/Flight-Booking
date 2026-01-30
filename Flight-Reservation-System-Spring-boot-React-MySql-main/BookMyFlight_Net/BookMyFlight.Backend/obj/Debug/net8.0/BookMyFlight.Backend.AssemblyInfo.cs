@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BookMyFlight.Backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7039bcbc3aa4e0fbc7b3758b54659ee6c75c0d39")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+735d2e1922a14504acedf911d0116dd6e2f0e738")]
 [assembly: System.Reflection.AssemblyProductAttribute("BookMyFlight.Backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BookMyFlight.Backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
