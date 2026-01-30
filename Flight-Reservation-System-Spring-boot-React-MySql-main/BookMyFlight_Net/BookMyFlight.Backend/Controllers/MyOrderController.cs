@@ -7,6 +7,8 @@ using System.Text.Json;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using BookMyFlight.Backend.Services;
+using BookMyFlight.Backend.Entities;
 
 namespace BookMyFlight.Backend.Controllers
 {
