@@ -1,0 +1,45 @@
+﻿@model BookMyFlight.Backend.Models.EntityOrder
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-7">
+        <div class="card p-4 border-success border-2 shadow-lg">
+            <div class="card-body">
+                <div class="text-center mb-4">
+                    <div class="display-1 text-success mb-3">🎉</div>
+                    <h2 class="card-title text-success fw-bold">Payment Successful!</h2>
+                    <p class="text-muted">Your flight ticket has been confirmed.</p>
+                </div>
+
+                <div class="row mt-4 px-3">
+                    <div class="col-md-6 mb-3">
+                        <div class="border-start border-4 border-primary ps-3">
+                            <span class="text-muted d-block small fw-bold text-uppercase">Passenger Details</span>
+                            <span class="d-block fs-5 fw-bold">@Model.Name</span>
+                            <span class="d-block text-muted small">@Model.Email</span>
+                            <span class="d-block text-muted small">@Model.Mobile</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3 text-md-end">
+                        <div class="pe-3">
+                            <span class="text-muted d-block small fw-bold text-uppercase">Payment Info</span>
+                            <span class="d-block fs-4 fw-bold text-primary">₹@Model.Amount</span>
+                            <span class="d-block text-muted small"><b>Order ID:</b> @Model.OrderId</span>
+                            <span class="d-block text-muted small"><b>Transaction ID:</b> @Model.TransactionId</span>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4" />
+
+                <div class="row g-3">
+                    <div class="col-sm-6 d-grid">
+                        <a href="http://localhost:3000/ticket" class="btn btn-success btn-lg shadow-sm rounded-pill">View Your Ticket</a>
+                    </div>
+                    <div class="col-sm-6 d-grid">
+                        <a href="http://localhost:3000/booking" class="btn btn-outline-primary btn-lg rounded-pill">Book Another Flight</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
