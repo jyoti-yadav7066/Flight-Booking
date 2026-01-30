@@ -110,8 +110,10 @@ namespace BookMyFlight.Backend.Controllers
                     var ticketData = new { ticketNumber = 0, booking_date = (string)null, total_pay = 0 };
                     var content = new StringContent(JsonSerializer.Serialize(ticketData), Encoding.UTF8, "application/json");
                     
-                    // URL: http://localhost:8980/book/ticket/{userId}/{bookid}/{pay}
-                    var response = await httpClient.PostAsync($"http://localhost:8980/book/ticket/{order.UserId}/{order.Id}/1", content);
+                    // Dynamic URL based on environment port
+                    var port = Environment.GetEnvironmentVariable("PORT") ?? "8980";
+                    var selfUrl = $"http://localhost:{port}";
+                    var response = await httpClient.PostAsync($"{selfUrl}/book/ticket/{order.UserId}/{order.Id}/1", content);
                     
                     if (!response.IsSuccessStatusCode)
                     {
