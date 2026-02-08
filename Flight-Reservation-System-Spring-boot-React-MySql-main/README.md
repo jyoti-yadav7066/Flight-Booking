@@ -1,7 +1,7 @@
 # Flight-Reservation-System
 Technologies : Spring Boot, rest API, JPA, React JS, MySQL
 
-E-DAC Project (may 2021, IACSD PUNE)
+
 
 User interface developed for Flight Reservation System using React.js Library
 Flight Reservation System is an Flight reservation/booking system.
@@ -22,6 +22,8 @@ Emailjs ued for sending ticket details to user
 Weather API used to get today's weather
 Images are for personal use only and a big credit to Flaticons
 
+
+
 ## How to Use/Control?
 
 1. User can search for flights based on source, destination and date without logging in.
@@ -30,6 +32,11 @@ Images are for personal use only and a big credit to Flaticons
 4. For booking user has to enter passengers information.
 5. User enter payment details for ticket generation.
 6. User can either print the ticket and mail the ticket.
+
+
+
+
+
 
 ## How To Install.
 
