@@ -15,6 +15,7 @@ namespace BookMyFlight.Backend.Controllers
     public class MyOrderController : Controller
     {
         private readonly IBookingService _bookService;
+        // Constructor injection of booking service
 
         public MyOrderController(IBookingService bookService)
         {
@@ -40,7 +41,7 @@ namespace BookMyFlight.Backend.Controllers
                 UserId = string.IsNullOrEmpty(Request.Query["userId"]) ? 0 : Convert.ToInt32(Request.Query["userId"])
             };
 
-            return View(model);
+            return View(model);// Pass model to Razor view
         }
 
 
@@ -61,6 +62,8 @@ namespace BookMyFlight.Backend.Controllers
                 return RedirectToAction("Index", new { userId = _OrderDetails.UserId, bookingId = _OrderDetails.Id, amount = _OrderDetails.Amount, name = _OrderDetails.Name, email = _OrderDetails.Email, mobile = _OrderDetails.Mobile });
             }
             // ------------------------------
+
+            // Razorpay test credentials (should be stored in env vars in production) string key = "rzp_test_S8p5Gc7pIh86oW"; string secret = "SaglgWuJ6L1V1fu51BpZq5m2";
 
             string key = "rzp_test_S8p5Gc7pIh86oW";
             string secret = "SaglgWuJ6L1V1fu51BpZq5m2";
