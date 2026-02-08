@@ -2,10 +2,11 @@
   background-image: url("../images/planebg.png");
 }
 .box{
-  position: absolute;
-  top: -webkit-calc(35% - 125px);
-  left: calc(50% - 300px);
-  left: -webkit-calc(50% - 300px);
+  /* Keep the ticket in normal document flow so it's visible inside its container */
+  position: relative;
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 40px;
 }
 
 .ticket{
